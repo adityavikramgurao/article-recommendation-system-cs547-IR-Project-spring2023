@@ -12,4 +12,11 @@ We have our code in Jupyter Notebook file called 'final_ir.ipynb'. In order to r
 However, 10,000 calls are applicable for only first month after that you get 500 Requests per month.
 We have also added 'datacollection.ipynb', so that you'll only need to put API Key and make few changes in query to collect data.
 
+We used this form to collect Email ID:
+https://forms.gle/ssKBmnBioU2S5MMT7
+
+We used this form to collect feedback:
+https://forms.gle/hCeGJqoSDMrn6PdV9
+
+
 Website Link:https://adityavikramgurao.github.io/article-recommendation-system-cs547-IR-Project-spring2023/
