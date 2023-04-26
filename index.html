@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Article Recommedation System</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header" class="dark">
+		<header>
+			<h1>Welcome to Our CS547 Project: Article Recommendation System</h1>
+		</header>
+		<footer>
+			<a href="#first" class="button scrolly">Proceed</a>
+		</footer>
+	</section>
+
+	<!-- First -->
+	<section id="first" class="main">
+		<header>
+			<div class="container">
+				<h2>Article Recommendation System</h2>
+				<h5>By</h5>
+				<h5>Supreeth Bandi</h5>
+				<h5>Adityavikram Gurao</h5>
+				<h5>Sree Likhith Dasari</h5>
+				<h5>Snehith Varma Datla</h5>
+				<h5>Under the Guidance of Prof. Kyumen Lee</h5>
+				<p>Welcome to our Information Retrieval project Article Recommendation System! Our system uses
+					cutting-edge technology to provide you with personalized news and article recommendations based on
+					your interests. We integrate with NewsCatcherAPI to deliver the most relevant articles to you and
+					use advanced algorithms to ensure that you receive articles that match your interests. Our system
+					also allows you to subscribe to our free newsletter service to stay up-to-date with the latest news
+					and trends in your favorite topics. Join our community today and experience the benefits of our
+					state-of-the-art article recommendation system!.</p>
+			</div>
+		</header>
+		<div class="content dark style1 featured">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-12-narrow">
+						<section>
+							<span class="feature-icon"><span class="icon fa-clock"></span></span>
+							<header>
+								<h3>Data Gathering</h3>
+							</header>
+							<p>We have collected data from NewsCatcherAPI. We also use data from the MIND: MIcrosoft
+								News Dataset </p>
+						</section>
+					</div>
+					<div class="col-4 col-12-narrow">
+						<section>
+							<span class="feature-icon"><span class="icon solid fa-bolt"></span></span>
+							<header>
+								<h3>Pre-processing and Making Model</h3>
+							</header>
+							<p>Data Pre-processing -> TF-IDF -> Cosine Similarity ->
+								Recommendations -> Feedback Collection </p>
+						</section>
+					</div>
+					<div class="col-4 col-12-narrow">
+						<section>
+							<span class="feature-icon"><span class="icon solid fa-cloud"></span></span>
+							<header>
+								<h3>Recommendations</h3>
+							</header>
+							<p>Users will be provided with the news and articles regarding their preference.</p>
+						</section>
+					</div>
+					<div class="col-12">
+						<footer>
+							<a href="#second" class="button scrolly">Explaination</a>
+						</footer>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Second -->
+	<section id="second" class="main">
+		<header>
+			<div class="container">
+				<h2>Data Gathering</h2>
+				<p>We have collected data using NewsCatcherAPI which is a dynamic platform to crawl among the websites
+					tagged with a keyword. We have also used MIND Dataset.<br />
+					Mi crosoft N ews D ataset (MIND) is a large-scale dataset for news recommendation research. It was
+					collected from anonymized behavior logs of Microsoft News website. The mission of MIND is to serve
+					as a benchmark dataset for news recommendation and facilitate the research in news recommendation
+					and recommender systems area.</p>
+			</div>
+		</header>
+		<header>
+			<div class="container">
+				<h2>Pre-processing and Making Model</h2>
+				<p> Removal of Stop Words using NLTK Library. In information retrieval, tf-idf (also TF*IDF, TFIDF,
+					TF-IDF, or Tf-idf), short for term frequency-inverse document frequency, is a numerical statistic
+					that is intended to reflect how important a word is to a document in a collection or corpus. It is
+					often used as a weighting factor in searches of information retrieval, text mining, and user
+					modeling. The tf-idf value increases proportionally to the number of times a word appears in the
+					document and is offset by the number of documents in the corpus that contain the word, which helps
+					to adjust for the fact that some words appear more frequently in general. tf-idf has been one of the
+					most popular term-weighting schemes.The weight of a term that occurs in a document is simply
+					proportional to the term frequency. Formula : tf(t,d) = count of t in d / number of words in
+					d. Here, t is term, d is document. Cosine similarity is a measure of similarity between two
+					non-zero vectors defined in an inner product space. Cosine similarity is the cosine of the angle
+					between the vectors; that is, it is the dot product of the vectors divided by the product of their
+					lengths. It follows that the cosine similarity does not depend on the magnitudes of the vectors, but
+					only on their angle. The cosine similarity always belongs to the interval [-1,1].<br />
+					We have used TruncatedSVD. Truncated Singular Value Decomposition (SVD) is a matrix factorization
+					technique that factors a matrix M into the three matrices U, Σ, and V.We trained tf-idf from text
+					data. Since we used target encoding and label encoding for category labels, we tried to use the
+					probabilistic distribution of clusters of text-operating the category using MultinomaiNB.Since we
+					used target encoding and label encoding for category labels, we tried to use the probabilistic
+					distribution of clusters of text-operating the category using MultinomaiNB. After training the
+					model, we used KNN to find the 5 nearest URLs.NN works by finding the k-nearest data points to a new
+					data point and using those k-nearest data points to make a prediction about the grouping of the new
+					data point. The algorithm calculates the distance between the new data point and all other data
+					points in the training set. It then selects the k-nearest data points based on their distance to the
+					new data point.
+
+				</p>
+			</div>
+		</header>
+		<header>
+			<div class="container">
+				<h2>Recommendation Model</h2>
+				<p>We have used Item-based Collaborative filteration, Item-based collaborative filtering is a type of
+					recommendation system that uses similarities between items to provide recommendations. It addresses
+					some of the limitations of content-based filtering by using similarities between users and items
+					simultaneously to provide recommendations</p>
+			</div>
+		</header>
+		<header>
+			<div class="container">
+				<h2></h2>
+				<p><br />
+				</p>
+			</div>
+		</header>
+		<!-- <div class="content dark style2">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-12-narrow">
+						<section>
+							<h3></h3>
+							<p></p>
+							<p></p>
+							<footer>
+								<a href="#third" class="button scrolly">We did EDA on gathered data and found out some
+									good insights!</a>
+							</footer>
+						</section>
+					</div>
+					<div class="col-8 col-12-narrow">
+						<div class="row">
+							<div class="col-6"><a class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+							</div>
+							<div class="col-6"><a class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+							</div>
+							<div class="col-6"><a class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+							</div>
+							<div class="col-6"><a class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+							</div>
+							<div class="col-6"><a class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+							</div>
+							<div class="col-6"><a class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+		<!-- Third -->
+		<section id="third" class="main">
+			<!-- <header>
+			<div class="container">
+				<h2></h2>
+				<p><br />
+				</p>
+			</div>
+		</header> -->
+			<div class="content dark style3">
+				<div class="container">
+					<h3>We did EDA on gathered data and found out some insights!</h3>
+					<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+					<p>No. of Articles Vs Category/Genre of the Articles</p>
+					<div class="row">
+						<div class="col-4 col-12-narrow">
+							<h3></h3>
+							<p></p>
+							<p></p>
+						</div>
+						<div class="col-4 col-12-narrow">
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+						<div class="col-4 col-12-narrow">
+							<p></p>
+							<p></p>
+							<!-- <footer>
+								<a href="#fourth" class="button scrolly">Proceed Further</a>
+							</footer> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content dark style3">
+				<div class="container">
+					<h3></h3>
+					<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+					<p>Wordcloud of the Titles</p>
+					<div class="row">
+						<div class="col-4 col-12-narrow">
+							<h3></h3>
+							<p></p>
+							<p></p>
+						</div>
+						<div class="col-4 col-12-narrow">
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+						<div class="col-4 col-12-narrow">
+							<p></p>
+							<p></p>
+							<!-- <footer>
+								<a href="#fourth" class="button scrolly">Proceed Further</a>
+							</footer> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Basic Elements -->
+		<!--
+			<section class="main">
+				<header>
+					<div class="container">
+						<h2>A Whole Lotta Elements</h2>
+						<p>General purpose elements for every general purpose. Or something like that.</p>
+					</div>
+				</header>
+				<div class="content style1 dark">
+					<div class="container">
+						<section>
+							<header>
+								<h3>Paragraph</h3>
+								<p>This is a byline</p>
+							</header>
+							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
+							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
+							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
+							amet risus elit.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Blockquote</h3>
+							</header>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
+							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
+						</section>
+						<section>
+							<header>
+								<h3>Divider</h3>
+							</header>
+							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+							<hr />
+							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Unordered List</h3>
+							</header>
+							<ul class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h3>Ordered List</h3>
+							</header>
+							<ol class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ol>
+						</section>
+						<section>
+							<header>
+								<h3>Table</h3>
+							</header>
+							<div class="table-wrapper">
+								<table class="default">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>00001</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00002</td>
+											<td>Sit amet nullam</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00003</td>
+											<td>Feugiat felis viverra</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00004</td>
+											<td>Sagittis enim felis</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00005</td>
+											<td>Nullam sed vestibulum</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+						<section>
+							<header>
+								<h3>Form</h3>
+							</header>
+							<form method="post" action="#">
+								<div class="row gtr-50">
+									<div class="col-6 col-12-narrow">
+										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
+									</div>
+									<div class="col-6 col-12-narrow">
+										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
+									</div>
+									<div class="col-12">
+										<div class="select" tabindex="-1">
+											<select name="department" id="department">
+												<option value="">Choose a department</option>
+												<option value="1">Manufacturing</option>
+												<option value="2">Administration</option>
+												<option value="3">Support</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" class="button" value="Send Message" /></li>
+											<li><input type="reset" class="button alt" value="Clear Form" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</section>
+		-->
+
+		<!-- Fourth
+	<section id="fourth" class="main">
+		<header>
+			<div class="container">
+				<h2></h2>
+				<p></p>
+			</div>
+		</header>
+		<div class="content style4 featured">
+			<div class="container medium">
+				<form method="post" action="#">
+					<div class="row gtr-50">
+						<div class="col-6 col-12-mobile"><input type="text" placeholder="Name" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" placeholder="Email" /></div>
+						<div class="col-12"><textarea name="message" placeholder="Message"></textarea></div>
+						<div class="col-12">
+							<ul class="actions special">
+								<li><input type="submit" class="button" value="Send Message" /></li>
+								<li><input type="reset" class="button alt" value="Clear Form" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section> -->
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy;CS547TeamARSystem. All rights reserved.</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
