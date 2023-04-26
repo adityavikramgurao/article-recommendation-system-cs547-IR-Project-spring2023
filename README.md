@@ -19,4 +19,4 @@ We used this form to collect feedback:
 https://forms.gle/hCeGJqoSDMrn6PdV9
 
 
-Website Link:https://adityavikramgurao.github.io/article-recommendation-system-cs547-IR-Project-spring2023/
+Website Link: https://adityavikramgurao.github.io/article-recommendation-system-cs547-IR-Project-spring2023/
